@@ -32,3 +32,7 @@ User ID: Unique identifier for each telecom user.
 <br>**Intl_Charge**: Total charge for international calls.
 <br>**Service_Calls**: Number of user service calls made by the user.
 <br>**Attrition**: The target variable indicates user attrition (Yes/No).
+
+
+# Citation
+www.kaggle.com/competitions/ctd-datawiz-2023/overview/citation
