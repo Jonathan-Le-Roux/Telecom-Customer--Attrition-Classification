@@ -73,6 +73,9 @@ class MinuteImputer(BaseEstimator, TransformerMixin):
     If both _Minutes and _Charge are missing, the imputer calculates the mean or median minutes per call
     '''
 
+
+    ### TODO: can be calculated using DUration.
+
     def __init__(self, strategy='mean'):
         self.strategy = strategy
 
