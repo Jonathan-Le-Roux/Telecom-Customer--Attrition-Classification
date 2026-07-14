@@ -2,15 +2,10 @@
 
 In today's highly competitive telecom industry, retaining users is of paramount importance. Subscriber attrition, whether to competitors or due to dissatisfaction, can greatly affect a company's performance and profitability. Your objective is to build a predictive model that, given the historical data of telecom customers, can identify new users who are at risk of attrition in the near future.
 
-# Files Description
-The data consists of three files:
-
-train.csv - the training set
-test.csv - the test set
-sample_submission.csv - a sample submission file in the correct format
-
 # Data Dictionary
-User ID: Unique identifier for each telecom user.
+All data is located [here](data/telecoms.csv)
+
+<br>User ID: Unique identifier for each telecom user.
 <br>**Mobile No**: User's mobile phone number.
 <br>**User DOB**: Date of birth of the user.
 <br>**User Job**: Occupation or job of the user.
