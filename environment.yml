@@ -1,4 +1,4 @@
-name: hands_on_ml
+name: telecoms
 channels:
   - conda-forge
   - defaults
