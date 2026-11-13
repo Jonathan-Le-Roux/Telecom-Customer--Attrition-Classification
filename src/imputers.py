@@ -9,7 +9,8 @@ class VoicemailImputer(BaseEstimator, TransformerMixin):
     If "Voicemail_Plan" is "no", missing values in "Voicemail_Messages" are imputed with 0.
 
     If "Voicemail_Plan" is "yes", missing values in "Voicemail_Messages" can be imputed with 0, 
-    the mean, or the median of the non-missing values in "Voicemail_Messages" based on the'''
+    the mean, or the median of the non-missing values in "Voicemail_Messages" based on the strategy
+    '''
     
     def __init__(self, strategy='zero'):
         self.strategy = strategy
@@ -59,7 +60,8 @@ class InternationalPlanImputer(BaseEstimator, TransformerMixin):
         mask_pos= (
             (X["Intl_Plan"].isna()) &
             (X["Intl_Minutes"] > 0) |
-            (X["Intl_Calls"] > 0)
+            (X["Intl_Calls"] > 0)   | 
+            (X['Intl_Charges' > 0])
             )
         
         X.loc[mask_pos, "Intl_Plan"] = "yes"
