@@ -53,36 +53,6 @@ class VoicemailMessagesImputer(BaseEstimator, TransformerMixin):
         return X
     
 
-    pass
-    # '''
-    # Imputes the charges for the international charges using linear regression based on the data
-    # '''
-    # def fit(self,X,y = None):
-    #     # Select rows where Intl_Charge is not missing
-    #     train_data = X.dropna(subset=['Intl_Charge', 'Intl_Minutes'])
-
-    #     X_train = train_data[['Intl_Minutes']]
-    #     y_train = train_data['Intl_Charge']
-
-    #     # Train the regression model
-    #     self.lin_model = LinearRegression()
-    #     self.lin_model.fit(X_train, y_train)
-
-    #     return self
-
-    # def transform(self,X):
-    #     int_X = X.copy()
-
-    #     # Identify rows with missing international charges
-    #     missing = int_X['Intl_Charge'].isna()
-
-    #     # Predict charges for rows with missing values
-    #     X_missing = int_X.loc[missing, ['Intl_Minutes']]
-
-    #     int_X.loc[missing, 'Intl_Charge'] = self.lin_model.predict(X_missing)
-
-    #     return int_X
-
 class InternationalPlanImputer(BaseEstimator, TransformerMixin):
     """
     Imputes missing values in the "Intl_Plan" column based on the "Intl_Minutes" and "Intl_Calls" columns.
